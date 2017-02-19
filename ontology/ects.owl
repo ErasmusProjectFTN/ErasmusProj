@@ -9,7 +9,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://www.purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects">
         <owl:imports rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo"/>
     </owl:Ontology>
@@ -29,14 +30,14 @@
 
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasPart -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasPart">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasPart">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment>A relation to a Learning Opportunity Object that is logically included in the Learning Opportunity
 Object.
 This can be used to represent part-whole relations, such as the relationship between
 organisations and departments, or between programmes and constituent units. Content should be
 a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://purl.org/dc/terms/hasPart as defined by DCMI\-TERMS as an equivalent property.</rdfs:comment>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
@@ -48,6 +49,30 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
     
 
 
@@ -474,6 +499,54 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment>Represents universitiy regulations.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionName">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionStatus">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionalEctsCoordinator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionalEctsCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
