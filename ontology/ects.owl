@@ -257,6 +257,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>General information for students. This field does not contain information on courses.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -417,6 +418,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Represents information on key academic positions. Contains contact information.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -427,6 +429,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Contains information on academic calendar of learning institution that offers learning opportunities such as beginning of semesters, holidays, end of semesters...</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -437,6 +440,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Describes administrative procedures carried out by the acаdemic instutition that offers learning oppotunities.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -447,6 +451,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Contains information on learning institution that offers learning opportunities.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -457,6 +462,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Contains description of academic institution that offers learning opportunities.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -467,6 +473,7 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionDescription"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Represents universitiy regulations.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
