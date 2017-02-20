@@ -160,6 +160,14 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitType">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Describes course type.</rdfs:comment>
     </owl:DatatypeProperty>
@@ -604,6 +612,7 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
 
     <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance"/>
     </owl:Class>
     
 
@@ -612,6 +621,7 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
 
     <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification"/>
     </owl:Class>
     
 
@@ -628,6 +638,7 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
 
     <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:comment>Describes degree programme specification</rdfs:comment>
     </owl:Class>
     
 
