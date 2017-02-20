@@ -20,11 +20,149 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTermPatterns -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTermPatterns">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Semester</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Trimester</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityTypes -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityTypes">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>CourseUnit</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>DegreeProgramme</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasCourseUnitInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasCourseUnitInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
+        <rdfs:comment>Information on course specification</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasDegreeProgrammeInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasDegreeProgrammeInformation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification"/>
+        <rdfs:comment>Information on degree programme</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasDepartmentalEctsCoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasDepartmentalEctsCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasGeneralInformationForStudents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasGeneralInformationForStudents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:comment>Information for students. These information does not include learning opportunty specific information.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasInstitutionDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasInstitutionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+        <rdfs:comment>Information on institution that offers learning opportunity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasInstitutionalEctsCoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasInstitutionalEctsCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasLecturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasLecturer">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+    </owl:ObjectProperty>
     
 
 
@@ -120,8 +258,9 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitLevel">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Level"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The level on which the course is being held.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -146,6 +285,17 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
     
 
 
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTermPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTermPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Engagement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTermPatterns"/>
+        <rdfs:comment>Describes the pattern of the learning opportunity - it can either be semester or trimester.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitTitle">
@@ -162,10 +312,10 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
         <rdfs:domain>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
-                </owl:intersectionOf>
+                </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -177,19 +327,10 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitYearOfStudy -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitYearOfStudy">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Level"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnutTermPattern">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#Engagement"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Represents the year on which the course is being held.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -554,8 +695,16 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityType">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityTypes"/>
+        <rdfs:comment>Defines learning opportunity type. It can either be &quot;DegreeProgramme&quot; or &quot;CourseUnit&quot;.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
