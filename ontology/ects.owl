@@ -126,9 +126,9 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
     
 
 
-    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading -->
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommendedReading -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommandedReading">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitRecommendedReading">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInformation"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
@@ -160,8 +160,8 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitType">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Describes course type.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -527,8 +527,9 @@ a URI conforming to IETF\-RFC2396. Attention is drawn to the property http://pur
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionType">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Describes learning opportunity institution type.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -596,6 +597,38 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunityInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#LearningOpportunitySpecification"/>
+    </owl:Class>
     
 
 
