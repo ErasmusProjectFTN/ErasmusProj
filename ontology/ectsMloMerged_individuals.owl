@@ -1173,6 +1173,34 @@ Typically the web page of the provider or course.</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#course1_a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#course1_a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitSpecification"/>
+        <specifies rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#course1_i"/>
+        <CourseUnitRecommendedReading></CourseUnitRecommendedReading>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#course1_i -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#course1_i">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+        <CourseUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</CourseUnitCode>
+        <CourseUnitInformation>Predavanja (Teorijska nastava):Polje realnih i kompleksnih brojeva. Metrički prostori. Nizovi (konvergencija niza, realni i kompleksni nizovi, kompletni metrički prostori). Granična vrednost, neprekidnost i uniformna neprekidnost funkcija. Realne funkcije jedne realne promenljive (granična vrednost; neprekidnost; uniformna neprekidnost; diferencijalni račun i primena, neodređeni integral; određeni integral i primena; nesvojstveni integral). Realne funkcije više realnih promenljivih (granična vrednost; neprekidnost; uniformna neprekidnost; diferencijalni račun i primena). Obične diferencijalne jednačine prvog i višeg reda. Linearne diferencijalne jednačine n-tog reda. Praktična nastava (vežbe): Na vežbama se rade odgovarajući primeri sa teorijske nastave kojim se uvežbava dato gradivo a samim tim vežbe doprinose i razumevanju datog gradiva.</CourseUnitInformation>
+        <CourseUnitRecommendedReading>Matematička analiza 1- uvodni pojmovi i granični procesi
+Matemarička analiza 1 -diferencijalni i integralni račun, obične diferencijalne jednačine
+Zbirka rešenih zadataka iz Matematičke analize 1</CourseUnitRecommendedReading>
+        <CourseUnitTeachingMethods>Predavanja; Numeričko računske vežbe. Konsultacije. Predavanja se izvode kombinovano. Na predavanjima se izlaže teoretski deo gradiva propraćen karakterističnim primerima radi lakšeg razumevanja gradiva. Na vežbama, koja prate predavanja, rade se karakteristični zadaci i produbljuje se izloženo gradivo sa predavanja. Pored predavanja i vežbi redovno se održavaju i konsultacije.Deo gradiva, koji čini logičku celinu, može se polagati i u toku nastavnog procesa u obliku sledećih 5 modula (prvi modul: granični procesi; drugi modul: diferencijalni račun realne funkcije jedne realne promenljive, treći modul: diferencijalni račun realnih funkcija više realnih promenljivih; četvrti modul: integralni račun; peti modul: obične diferencijalne jednačine).</CourseUnitTeachingMethods>
+        <CourseUnitTitle>Matematička analiza</CourseUnitTitle>
+        <CourseUnitYearOfStudy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</CourseUnitYearOfStudy>
+        <Credit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Credit>
+        <Lecturer>Kovačević dr Ilija</Lecturer>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_a -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_a">
