@@ -1165,6 +1165,57 @@ Typically the web page of the provider or course.</rdfs:comment>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeSpecification"/>
+        <specifies rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_i"/>
+        <specifies rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program2_i"/>
+        <LanguageOfInstruction>Srpski</LanguageOfInstruction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_i -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program1_i">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance"/>
+        <offeredAt rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#provider1"/>
+        <DegreeProgrammeTitle>Računarstvo i automatika</DegreeProgrammeTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#program2_i -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#program2_i">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#DegreeProgrammeInstance"/>
+        <offeredAt rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#provider1"/>
+        <DegreeProgrammeTitle>Mehatronika</DegreeProgrammeTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#provider1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#provider1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#LearningOpportunityProvider"/>
+        <InstitutionName>Fakultet tehničkih nauka</InstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
