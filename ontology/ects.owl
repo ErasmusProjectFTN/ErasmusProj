@@ -135,6 +135,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasCourseUnitCompetence">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasObjective"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+        <rdfs:comment>Competences achieved by attending the course.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -162,6 +164,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2016/11/ects#hasCourseUnitLearningOutcome">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/mlo#hasObjective"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nina/ontologies/2016/11/ects#CourseUnitInstance"/>
+        <rdfs:comment>Course learning goals.</rdfs:comment>
     </owl:ObjectProperty>
     
 
