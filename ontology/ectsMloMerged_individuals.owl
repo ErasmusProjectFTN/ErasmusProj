@@ -701,7 +701,7 @@ Examples include overall attendance (full-time, part-time), modes of study (dist
 
     <owl:DatatypeProperty rdf:about="&ects;InstitutionStatus">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
-        <rdfs:domain rdf:resource="&ects;LearningOpportunitySpecification"/>
+        <rdfs:domain rdf:resource="&ects;LearningOpportunityProvider"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -720,7 +720,10 @@ Examples include overall attendance (full-time, part-time), modes of study (dist
 
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#InstitutionalEctsCoordinator -->
 
-    <owl:DatatypeProperty rdf:about="&ects;InstitutionalEctsCoordinator"/>
+    <owl:DatatypeProperty rdf:about="&ects;InstitutionalEctsCoordinator">
+        <rdfs:domain rdf:resource="&ects;LearningOpportunityProvider"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -776,7 +779,7 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#Location -->
 
     <owl:DatatypeProperty rdf:about="&ects;Location">
-        <rdfs:domain rdf:resource="&ects;LearningOpportunityInstance"/>
+        <rdfs:domain rdf:resource="&ects;LearningOpportunityObject"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
@@ -793,7 +796,11 @@ Level will typically indicate the intended outcome of the Learning Opportunity i
 
     <!-- http://www.semanticweb.org/nina/ontologies/2016/11/ects#Places -->
 
-    <owl:DatatypeProperty rdf:about="&ects;Places"/>
+    <owl:DatatypeProperty rdf:about="&ects;Places">
+        <rdfs:comment>Mesto na kom se odvija učešće u obrazovnoj prilici</rdfs:comment>
+        <rdfs:domain rdf:resource="&ects;LearningOpportunityInstance"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -833,6 +840,7 @@ ISO\-8601.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="&ects;Url">
         <rdfs:comment>A link to a web resource that provides an alternate representation of the resource. The content should conform to a URI IETF\-RFC2396.
 Typically the web page of the provider or course.</rdfs:comment>
+        <rdfs:domain rdf:resource="&ects;LearningOpportunityObject"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
@@ -956,8 +964,9 @@ Typically the web page of the provider or course.</rdfs:comment>
         <Lecturer></Lecturer>
         <Location></Location>
         <CourseUnitCompetence></CourseUnitCompetence>
-        <CourseUnitTeachingMethods></CourseUnitTeachingMethods>
+        <Places></Places>
         <LanguageOfInstruction></LanguageOfInstruction>
+        <CourseUnitTeachingMethods></CourseUnitTeachingMethods>
         <Prerequisite></Prerequisite>
         <CourseUnitCode></CourseUnitCode>
         <CourseUnitTermPattern>Semester</CourseUnitTermPattern>
@@ -980,8 +989,8 @@ Typically the web page of the provider or course.</rdfs:comment>
         <Start></Start>
         <Prerequisite></Prerequisite>
         <Location></Location>
-        <DepartmentalEctsCoordinator></DepartmentalEctsCoordinator>
         <DegreeProgrammeFinalExamination></DegreeProgrammeFinalExamination>
+        <DepartmentalEctsCoordinator></DepartmentalEctsCoordinator>
         <DegreeProgrammeExaminationAndAssessmentRegulations></DegreeProgrammeExaminationAndAssessmentRegulations>
         <LearningOpportunityType>DegreeProgramme</LearningOpportunityType>
         <offeredAt rdf:resource="&ects;provider1"/>
@@ -1063,6 +1072,7 @@ Typically the web page of the provider or course.</rdfs:comment>
         <GeneralInformationOnExtraMuralAndLeisureFacilities></GeneralInformationOnExtraMuralAndLeisureFacilities>
         <GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds></GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds>
         <GeneralInformationOnFinancialSupport></GeneralInformationOnFinancialSupport>
+        <InstitutionalEctsCoordinator></InstitutionalEctsCoordinator>
         <GeneralInformationOnLanguageCourses></GeneralInformationOnLanguageCourses>
         <InstitutionDescription>asdf</InstitutionDescription>
         <InstitutionAcademicCalendar>asd</InstitutionAcademicCalendar>
@@ -1095,8 +1105,8 @@ Typically the web page of the provider or course.</rdfs:comment>
         <GeneralInformationForMobileStudents></GeneralInformationForMobileStudents>
         <InstitutionMainUniversityRegulations></InstitutionMainUniversityRegulations>
         <GeneralInformationOnStudyFacilities></GeneralInformationOnStudyFacilities>
-        <GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds></GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds>
         <GeneralInformationOnCostOfLiving>asdf</GeneralInformationOnCostOfLiving>
+        <GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds></GeneralInformationOnFacilitiesForStudentsWithSpecialNeeds>
         <GeneralInformationOnLanguageCourses></GeneralInformationOnLanguageCourses>
         <GeneralInformationOnFinancialSupport></GeneralInformationOnFinancialSupport>
         <GeneralInformationOnSportsFacilities></GeneralInformationOnSportsFacilities>
@@ -1116,16 +1126,13 @@ Typically the web page of the provider or course.</rdfs:comment>
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&ects;LearningOpportunityInstance"/>
-            <rdf:Description rdf:about="&ects;LearningOpportunityProvider"/>
-            <rdf:Description rdf:about="&ects;LearningOpportunitySpecification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/course_unit_1"/>
+            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/course_unit_instance_1"/>
+            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/degree_programme_instance_1"/>
+            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/degree_programme_instance_2"/>
+            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/degree_programme_instance_3"/>
             <rdf:Description rdf:about="&ects;degree_programme_1"/>
             <rdf:Description rdf:about="&ects;degree_programme_2"/>
             <rdf:Description rdf:about="&ects;degree_programme_3"/>
@@ -1146,6 +1153,24 @@ Typically the web page of the provider or course.</rdfs:comment>
             <rdf:Description rdf:about="&ects;provider1"/>
             <rdf:Description rdf:about="&ects;provider2"/>
         </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ects;degree_programme_1"/>
+            <rdf:Description rdf:about="&ects;degree_programme_2"/>
+            <rdf:Description rdf:about="&ects;degree_programme_3"/>
+            <rdf:Description rdf:about="&ects;provider1"/>
+            <rdf:Description rdf:about="&ects;provider2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ects;LearningOpportunityInstance"/>
+            <rdf:Description rdf:about="&ects;LearningOpportunityProvider"/>
+            <rdf:Description rdf:about="&ects;LearningOpportunitySpecification"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
